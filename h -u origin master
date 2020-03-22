@@ -1,0 +1,1688 @@
+[33mcommit d6fb6a2df1562c085dd1fa83d3a5391db2a83292[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Manya Sharma <manyash96@gmail.com>
+Date:   Sat Mar 21 15:22:58 2020 +0530
+
+    final layout
+
+[1mdiff --git a/android/app/build.gradle b/android/app/build.gradle[m
+[1mindex 99c2e28..84463ca 100755[m
+[1m--- a/android/app/build.gradle[m
+[1m+++ b/android/app/build.gradle[m
+[36m@@ -108,8 +108,8 @@[m [mandroid {[m
+         applicationId "com.taskproject.wallet"[m
+         minSdkVersion rootProject.ext.minSdkVersion[m
+         targetSdkVersion rootProject.ext.targetSdkVersion[m
+[31m-        versionCode 53[m
+[31m-        versionName "2.0.2"[m
+[32m+[m[32m        versionCode 1[m
+[32m+[m[32m        versionName "0.0.1"[m
+         missingDimensionStrategy 'react-native-camera', 'general'[m
+     }[m
+     signingConfigs {[m
+[1mdiff --git a/android/app/src/main/AndroidManifest.xml b/android/app/src/main/AndroidManifest.xml[m
+[1mindex 0041460..c72731b 100755[m
+[1m--- a/android/app/src/main/AndroidManifest.xml[m
+[1m+++ b/android/app/src/main/AndroidManifest.xml[m
+[36m@@ -7,7 +7,7 @@[m
+     <application[m
+       android:name=".MainApplication"[m
+       android:label="@string/app_name"[m
+[31m-      android:icon="@mipmap/primereumfuel"[m
+[32m+[m[32m      android:icon="@mipmap/primereumimage"[m
+       android:allowBackup="false"[m
+       android:launchMode="singleTask"[m
+       android:usesCleartextTraffic="true"[m
+[1mdiff --git a/android/app/src/main/res/mipmap-xhdpi/primereumfuel.png b/android/app/src/main/res/mipmap-xhdpi/primereumfuel.png[m
+[1mdeleted file mode 100755[m
+[1mindex 9d4c0ea..0000000[m
+Binary files a/android/app/src/main/res/mipmap-xhdpi/primereumfuel.png and /dev/null differ
+[1mdiff --git a/android/app/src/main/res/mipmap-xhdpi/primereumimage.png b/android/app/src/main/res/mipmap-xhdpi/primereumimage.png[m
+[1mnew file mode 100755[m
+[1mindex 0000000..016b176[m
+Binary files /dev/null and b/android/app/src/main/res/mipmap-xhdpi/primereumimage.png differ
+[1mdiff --git a/android/settings.gradle b/android/settings.gradle[m
+[1mindex 797b918..2c1880b 100755[m
+[1m--- a/android/settings.gradle[m
+[1m+++ b/android/settings.gradle[m
+[36m@@ -7,6 +7,18 @@[m [minclude ':react-native-webview'[m
+ project(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')[m
+ include ':react-native-webview'[m
+ project(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')[m
+[32m+[m[32minclude ':react-native-webview'[m
+[32m+[m[32mproject(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')[m
+[32m+[m[32minclude ':react-native-webview'[m
+[32m+[m[32mproject(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')[m
+[32m+[m[32minclude ':react-native-webview'[m
+[32m+[m[32mproject(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')[m
+[32m+[m[32minclude ':react-native-webview'[m
+[32m+[m[32mproject(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')[m
+[32m+[m[32minclude ':react-native-webview'[m
+[32m+[m[32mproject(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')[m
+[32m+[m[32minclude ':react-native-webview'[m
+[32m+[m[32mproject(':react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview/android')[m
+ include ':@react-native-community_slider'[m
+ project(':@react-native-community_slider').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/slider/android')[m
+ include ':react-native-version-check'[m
+[1mdiff --git a/assets/Banner.jpg b/assets/Banner.jpg[m
+[1mdeleted file mode 100755[m
+[1mindex 92f32fe..0000000[m
+Binary files a/assets/Banner.jpg and /dev/null differ
+[1mdiff --git a/assets/GCR.png b/assets/GCR.png[m
+[1mdeleted file mode 100755[m
+[1mindex 0d24620..0000000[m
+Binary files a/assets/GCR.png and /dev/null differ
+[1mdiff --git a/assets/Paste.png b/assets/Paste.png[m
+[1mdeleted file mode 100755[m
+[1mindex d5a216a..0000000[m
+Binary files a/assets/Paste.png and /dev/null differ
+[1mdiff --git a/assets/PlusBtn.png b/assets/PlusBtn.png[m
+[1mdeleted file mode 100755[m
+[1mindex 3a77239..0000000[m
+Binary files a/assets/PlusBtn.png and /dev/null differ
+[1mdiff --git a/assets/Telegram.png b/assets/Telegram.png[m
+[1mdeleted file mode 100755[m
+[1mindex f2250ff..0000000[m
+Binary files a/assets/Telegram.png and /dev/null differ
+[1mdiff --git a/assets/app.png b/assets/app.png[m
+[1mdeleted file mode 100755[m
+[1mindex 4c18334..0000000[m
+Binary files a/assets/app.png and /dev/null differ
+[1mdiff --git a/assets/appShare.png b/assets/appShare.png[m
+[1mdeleted file mode 100755[m
+[1mindex 7f8a81b..0000000[m
+Binary files a/assets/appShare.png and /dev/null differ
+[1mdiff --git a/assets/assets-your-tokens.png b/assets/assets-your-tokens.png[m
+[1mdeleted file mode 100755[m
+[1mindex 54082c5..0000000[m
+Binary files a/assets/assets-your-tokens.png and /dev/null differ
+[1mdiff --git a/assets/assets-your-tokens_mainpage.png b/assets/assets-your-tokens_mainpage.png[m
+[1mdeleted file mode 100755[m
+[1mindex 52e0c72..0000000[m
+Binary files a/assets/assets-your-tokens_mainpage.png and /dev/null differ
+[1mdiff --git a/assets/assets1.png b/assets/assets1.png[m
+[1mdeleted file mode 100644[m
+[1mindex c964266..0000000[m
+Binary files a/assets/assets1.png and /dev/null differ
+[1mdiff --git a/assets/assets2.png b/assets/assets2.png[m
+[1mdeleted file mode 100755[m
+[1mindex 46c131f..0000000[m
+Binary files a/assets/assets2.png and /dev/null differ
+[1mdiff --git a/assets/backupfinished.png b/assets/backupfinished.png[m
+[1mdeleted file mode 100755[m
+[1mindex f85438b..0000000[m
+Binary files a/assets/backupfinished.png and /dev/null differ
+[1mdiff --git a/assets/backupfinishedicon.png b/assets/backupfinishedicon.png[m
+[1mdeleted file mode 100755[m
+[1mindex 6f70050..0000000[m
+Binary files a/assets/backupfinishedicon.png and /dev/null differ
+[1mdiff --git a/assets/backupphrase.png b/assets/backupphrase.png[m
+[1mdeleted file mode 100755[m
+[1mindex a7d10a2..0000000[m
+Binary files a/assets/backupphrase.png and /dev/null differ
+[1mdiff --git a/assets/bg.png b/assets/bg.png[m
+[1mdeleted file mode 100755[m
+[1mindex ae4395a..0000000[m
+Binary files a/assets/bg.png and /dev/null differ
+[1mdiff --git a/assets/bgblue.png b/assets/bgblue.png[m
+[1mdeleted file mode 100755[m
+[1mindex fb17ce2..0000000[m
+Binary files a/assets/bgblue.png and /dev/null differ
+[1mdiff --git a/assets/bgimage.png b/assets/bgimage.png[m
+[1mdeleted file mode 100755[m
+[1mindex 6611258..0000000[m
+Binary files a/assets/bgimage.png and /dev/null differ
+[1mdiff --git a/assets/bluee.png b/assets/bluee.png[m
+[1mdeleted file mode 100755[m
+[1mindex e305455..0000000[m
+Binary files a/assets/bluee.png and /dev/null differ
+[1mdiff --git a/assets/claimtoken.png b/assets/claimtoken.png[m
+[1mdeleted file mode 100755[m
+[1mindex 7f4edc0..0000000[m
+Binary files a/assets/claimtoken.png and /dev/null differ
+[1mdiff --git a/assets/coins.png b/assets/coins.png[m
+[1mdeleted file mode 100755[m
+[1mindex 593e77b..0000000[m
+Binary files a/assets/coins.png and /dev/null differ
+[1mdiff --git a/assets/contactSend.png b/assets/contactSend.png[m
+[1mdeleted file mode 100755[m
+[1mindex 600c8b9..0000000[m
+Binary files a/assets/contactSend.png and /dev/null differ
+[1mdiff --git a/assets/contactV1.png b/assets/contactV1.png[m
+[1mdeleted file mode 100755[m
+[1mindex 7035064..0000000[m
+Binary files a/assets/contactV1.png and /dev/null differ
+[1mdiff --git a/assets/contacts.png b/assets/contacts.png[m
+[1mdeleted file mode 100755[m
+[1mindex 7a92c38..0000000[m
+Binary files a/assets/contacts.png and /dev/null differ
+[1mdiff --git a/assets/copy.png b/assets/copy.png[m
+[1mdeleted file mode 100755[m
+[1mindex 35d47c8..0000000[m
+Binary files a/assets/copy.png and /dev/null differ
+[1mdiff --git a/assets/copywhite.png b/assets/copywhite.png[m
+[1mdeleted file mode 100755[m
+[1mindex 018ec7e..0000000[m
+Binary files a/assets/copywhite.png and /dev/null differ
+[1mdiff --git a/assets/down.png b/assets/down.png[m
+[1mdeleted file mode 100755[m
+[1mindex 5c8fcc3..0000000[m
+Binary files a/assets/down.png and /dev/null differ
+[1mdiff --git a/assets/eBalance.png b/assets/eBalance.png[m
+[1mdeleted file mode 100755[m
+[1mindex f850514..0000000[m
+Binary files a/assets/eBalance.png and /dev/null differ
+[1mdiff --git a/assets/eth.png b/assets/eth.png[m
+[1mdeleted file mode 100755[m
+[1mindex 20cb90d..0000000[m
+Binary files a/assets/eth.png and /dev/null differ
+[1mdiff --git a/assets/ethereum-token.png b/assets/ethereum-token.png[m
+[1mdeleted file mode 100755[m
+[1mindex 918a40e..0000000[m
+Binary files a/assets/ethereum-token.png and /dev/null differ
+[1mdiff --git a/assets/ethsend.png b/assets/ethsend.png[m
+[1mdeleted file mode 100755[m
+[1mindex ed586a2..0000000[m
+Binary files a/assets/ethsend.png and /dev/null differ
+[1mdiff --git a/assets/explorer.png b/assets/explorer.png[m
+[1mdeleted file mode 100755[m
+[1mindex 19d5e54..0000000[m
+Binary files a/assets/explorer.png and /dev/null differ
+[1mdiff --git a/assets/eye.png b/assets/eye.png[m
+[1mdeleted file mode 100755[m
+[1mindex 296561d..0000000[m
+Binary files a/assets/eye.png and /dev/null differ
+[1mdiff --git a/assets/highly-secure-wallet.png b/assets/highly-secure-wallet.png[m
+[1mdeleted file mode 100755[m
+[1mindex 3240ab0..0000000[m
+Binary files a/assets/highly-secure-wallet.png and /dev/null differ
+[1mdiff --git a/assets/home_bg.png b/assets/home_bg.png[m
+[1mdeleted file mode 100755[m
+[1mindex 5e9362a..0000000[m
+Binary files a/assets/home_bg.png and /dev/null differ
+[1mdiff --git a/assets/icon_option.png b/assets/icon_option.png[m
+[1mdeleted file mode 100755[m
+[1mindex 3fc2ade..0000000[m
+Binary files a/assets/icon_option.png and /dev/null differ
+[1mdiff --git a/assets/icon_restore.png b/assets/icon_restore.png[m
+[1mdeleted file mode 100755[m
+[1mindex 3b79dfb..0000000[m
+Binary files a/assets/icon_restore.png and /dev/null differ
+[1mdiff --git a/assets/icon_restore2.png b/assets/icon_restore2.png[m
+[1mdeleted file mode 100755[m
+[1mindex 47c518a..0000000[m
+Binary files a/assets/icon_restore2.png and /dev/null differ
+[1mdiff --git a/assets/key.png b/assets/key.png[m
+[1mdeleted file mode 100755[m
+[1mindex 05f29a8..0000000[m
+Binary files a/assets/key.png and /dev/null differ
+[1mdiff --git a/assets/landing-page.png b/assets/landing-page.png[m
+[1mdeleted file mode 100755[m
+[1mindex 9c43e14..0000000[m
+Binary files a/assets/landing-page.png and /dev/null differ
+[1mdiff --git a/assets/leftArrow.png b/assets/leftArrow.png[m
+[1mdeleted file mode 100755[m
+[1mindex 042e63c..0000000[m
+Binary files a/assets/leftArrow.png and /dev/null differ
+[1mdiff --git a/assets/loader.gif b/assets/loader.gif[m
+[1mdeleted file mode 100755[m
+[1mindex 62d8e4e..0000000[m
+Binary files a/assets/loader.gif and /dev/null differ
+[1mdiff --git a/assets/logo.png b/assets/logo.png[m
+[1mdeleted file mode 100755[m
+[1mindex 68d5a30..0000000[m
+Binary files a/assets/logo.png and /dev/null differ
+[1mdiff --git a/assets/market1.png b/assets/market1.png[m
+[1mdeleted file mode 100755[m
+[1mindex b4d3e44..0000000[m
+Binary files a/assets/market1.png and /dev/null differ
+[1mdiff --git a/assets/market2.png b/assets/market2.png[m
+[1mdeleted file mode 100755[m
+[1mindex c1805ab..0000000[m
+Binary files a/assets/market2.png and /dev/null differ
+[1mdiff --git a/assets/mask.png b/assets/mask.png[m
+[1mdeleted file mode 100755[m
+[1mindex e5fb156..0000000[m
+Binary files a/assets/mask.png and /dev/null differ
+[1mdiff --git a/assets/news1.png b/assets/news1.png[m
+[1mdeleted file mode 100755[m
+[1mindex 30ad748..0000000[m
+Binary files a/assets/news1.png and /dev/null differ
+[1mdiff --git a/assets/news2.png b/assets/news2.png[m
+[1mdeleted file mode 100755[m
+[1mindex 5abbb72..0000000[m
+Binary files a/assets/news2.png and /dev/null differ
+[1mdiff --git a/assets/news_more.png b/assets/news_more.png[m
+[1mdeleted file mode 100755[m
+[1mindex 33bfa5e..0000000[m
+Binary files a/assets/news_more.png and /dev/null differ
+[1mdiff --git a/assets/nonet.png b/assets/nonet.png[m
+[1mdeleted file mode 100644[m
+[1mindex 2fae7fc..0000000[m
+Binary files a/assets/nonet.png and /dev/null differ
+[1mdiff --git a/assets/notxn.png b/assets/notxn.png[m
+[1mdeleted file mode 100755[m
+[1mindex 298689f..0000000[m
+Binary files a/assets/notxn.png and /dev/null differ
+[1mdiff --git a/assets/pharse.png b/assets/pharse.png[m
+[1mdeleted file mode 100755[m
+[1mindex 7f7f79a..0000000[m
+Binary files a/assets/pharse.png and /dev/null differ
+[1mdiff --git a/assets/pinscreen.jpg b/assets/pinscreen.jpg[m
+[1mdeleted file mode 100755[m
+[1mindex 234c4e8..0000000[m
+Binary files a/assets/pinscreen.jpg and /dev/null differ
+[1mdiff --git a/assets/preferences.png b/assets/preferences.png[m
+[1mdeleted file mode 100755[m
+[1mindex 9b2a3b2..0000000[m
+Binary files a/assets/preferences.png and /dev/null differ
+[1mdiff --git a/assets/primereumfuel.png b/assets/primereumfuel.png[m
+[1mdeleted file mode 100755[m
+[1mindex 9d4c0ea..0000000[m
+Binary files a/assets/primereumfuel.png and /dev/null differ
+[1mdiff --git a/assets/privacy_policy.png b/assets/privacy_policy.png[m
+[1mdeleted file mode 100755[m
+[1mindex e5d6ef4..0000000[m
+Binary files a/assets/privacy_policy.png and /dev/null differ
+[1mdiff --git a/assets/qrCode.png b/assets/qrCode.png[m
+[1mdeleted file mode 100755[m
+[1mindex 11ac98f..0000000[m
+Binary files a/assets/qrCode.png and /dev/null differ
+[1mdiff --git a/assets/qrCodeWhite.png b/assets/qrCodeWhite.png[m
+[1mdeleted file mode 100755[m
+[1mindex 0e29772..0000000[m
+Binary files a/assets/qrCodeWhite.png and /dev/null differ
+[1mdiff --git a/assets/receive.png b/assets/receive.png[m
+[1mdeleted file mode 100755[m
+[1mindex f50479c..0000000[m
+Binary files a/assets/receive.png and /dev/null differ
+[1mdiff --git a/assets/recover.png b/assets/recover.png[m
+[1mdeleted file mode 100755[m
+[1mindex 0253a02..0000000[m
+Binary files a/assets/recover.png and /dev/null differ
+[1mdiff --git a/assets/rect.png b/assets/rect.png[m
+[1mdeleted file mode 100755[m
+[1mindex 3638258..0000000[m
+Binary files a/assets/rect.png and /dev/null differ
+[1mdiff --git a/assets/recv.png b/assets/recv.png[m
+[1mdeleted file mode 100755[m
+[1mindex 05ab52a..0000000[m
+Binary files a/assets/recv.png and /dev/null differ
+[1mdiff --git a/assets/report.png b/assets/report.png[m
+[1mdeleted file mode 100755[m
+[1mindex 83ab7bb..0000000[m
+Binary files a/assets/report.png and /dev/null differ
+[1mdiff --git a/assets/rightArrow.png b/assets/rightArrow.png[m
+[1mdeleted file mode 100755[m
+[1mindex e2c1fc8..0000000[m
+Binary files a/assets/rightArrow.png and /dev/null differ
+[1mdiff --git a/assets/rytArrow.png b/assets/rytArrow.png[m
+[1mdeleted file mode 100755[m
+[1mindex 88c72fd..0000000[m
+Binary files a/assets/rytArrow.png and /dev/null differ
+[1mdiff --git a/assets/send.png b/assets/send.png[m
+[1mdeleted file mode 100755[m
+[1mindex 095e810..0000000[m
+Binary files a/assets/send.png and /dev/null differ
+[1mdiff --git a/assets/sendd.png b/assets/sendd.png[m
+[1mdeleted file mode 100755[m
+[1mindex 1591b04..0000000[m
+Binary files a/assets/sendd.png and /dev/null differ
+[1mdiff --git a/assets/share.png b/assets/share.png[m
+[1mdeleted file mode 100755[m
+[1mindex 270aebe..0000000[m
+Binary files a/assets/share.png and /dev/null differ
+[1mdiff --git a/assets/sharee.png b/assets/sharee.png[m
+[1mdeleted file mode 100755[m
+[1mindex 270aebe..0000000[m
+Binary files a/assets/sharee.png and /dev/null differ
+[1mdiff --git a/assets/sharewhite.png b/assets/sharewhite.png[m
+[1mdeleted file mode 100755[m
+[1mindex e919365..0000000[m
+Binary files a/assets/sharewhite.png and /dev/null differ
+[1mdiff --git a/assets/simple-backup.png b/assets/simple-backup.png[m
+[1mdeleted file mode 100755[m
+[1mindex ce22953..0000000[m
+Binary files a/assets/simple-backup.png and /dev/null differ
+[1mdiff --git a/assets/slider.png b/assets/slider.png[m
+[1mdeleted file mode 100755[m
+[1mindex 8500deb..0000000[m
+Binary files a/assets/slider.png and /dev/null differ
+[1mdiff --git a/assets/slider2.png b/assets/slider2.png[m
+[1mdeleted file mode 100755[m
+[1mindex fad1526..0000000[m
+Binary files a/assets/slider2.png and /dev/null differ
+[1mdiff --git a/assets/slider3.png b/assets/slider3.png[m
+[1mdeleted file mode 100755[m
+[1mindex 4cbb04f..0000000[m
+Binary files a/assets/slider3.png and /dev/null differ
+[1mdiff --git a/assets/tele.png b/assets/tele.png[m
+[1mdeleted file mode 100755[m
+[1mindex 3776796..0000000[m
+Binary files a/assets/tele.png and /dev/null differ
+[1mdiff --git a/assets/token2.png b/assets/token2.png[m
+[1mdeleted file mode 100755[m
+[1mindex 742a420..0000000[m
+Binary files a/assets/token2.png and /dev/null differ
+[1mdiff --git a/assets/transactions.png b/assets/transactions.png[m
+[1mdeleted file mode 100755[m
+[1mindex 07619bf..0000000[m
+Binary files a/assets/transactions.png and /dev/null differ
+[1mdiff --git a/assets/up.png b/assets/up.png[m
+[1mdeleted file mode 100755[m
+[1mindex 04492f9..0000000[m
+Binary files a/assets/up.png and /dev/null differ
+[1mdiff --git a/assets/users.png b/assets/users.png[m
+[1mdeleted file mode 100755[m
+[1mindex 36d5735..0000000[m
+Binary files a/assets/users.png and /dev/null differ
+[1mdiff --git a/assets/wallet.png b/assets/wallet.png[m
+[1mdeleted file mode 100644[m
+[1mindex a0e058d..0000000[m
+Binary files a/assets/wallet.png and /dev/null differ
+[1mdiff --git a/assets/x.png b/assets/x.png[m
+[1mdeleted file mode 100755[m
+[1mindex 6a15cc6..0000000[m
+Binary files a/assets/x.png and /dev/null differ
+[1mdiff --git a/assets/xross.png b/assets/xross.png[m
+[1mdeleted file mode 100755[m
+[1mindex f7ec360..0000000[m
+Binary files a/assets/xross.png and /dev/null differ
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex c1e0efe..cf2495c 100755[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -2792,9 +2792,9 @@[m
+       }[m
+     },[m
+     "@react-native-community/art": {[m
+[31m-      "version": "1.1.2",[m
+[31m-      "resolved": "https://registry.npmjs.org/@react-native-community/art/-/art-1.1.2.tgz",[m
+[31m-      "integrity": "sha512-KCPWdrdkjMOjUjKjYhJUt628mjf+SyoopXPztFbPvSpMl6jI9Qs8fnxnrt8ITKJvt7Xy7K7y6Cn/Q5h1GgIwjQ==",[m
+[32m+[m[32m      "version": "1.2.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@react-native-community/art/-/art-1.2.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-a+ZcRGl/BzLa89yi33Mbn5SHavsEXqKUMdbfLf3U8MDLElndPqUetoJyGkv63+BcPO49UMWiQRP1YUz6/zfJ+A==",[m
+       "requires": {[m
+         "art": "^0.10.3",[m
+         "invariant": "^2.2.4",[m
+[36m@@ -3089,11 +3089,6 @@[m
+       "integrity": "sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==",[m
+       "dev": true[m
+     },[m
+[31m-    "aes-js": {[m
+[31m-      "version": "3.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/aes-js/-/aes-js-3.0.0.tgz",[m
+[31m-      "integrity": "sha1-4h3xCtbCBTKVvLuNq0Cwnb6ofk0="[m
+[31m-    },[m
+     "ajv": {[m
+       "version": "6.10.2",[m
+       "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.10.2.tgz",[m
+[36m@@ -3570,28 +3565,6 @@[m
+       "integrity": "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU=",[m
+       "dev": true[m
+     },[m
+[31m-    "assign-deep": {[m
+[31m-      "version": "0.4.8",[m
+[31m-      "resolved": "https://registry.npmjs.org/assign-deep/-/assign-deep-0.4.8.tgz",[m
+[31m-      "integrity": "sha512-uxqXJCnNZDEjPnsaLKVzmh/ST5+Pqoz0wi06HDfHKx1ASNpSbbvz2qW2Gl8ZyHwr5jnm11X2S5eMQaP1lMZmCg==",[m
+[31m-      "requires": {[m
+[31m-        "assign-symbols": "^0.1.1",[m
+[31m-        "is-primitive": "^2.0.0",[m
+[31m-        "kind-of": "^5.0.2"[m
+[31m-      },[m
+[31m-      "dependencies": {[m
+[31m-        "assign-symbols": {[m
+[31m-          "version": "0.1.1",[m
+[31m-          "resolved": "https://registry.npmjs.org/assign-symbols/-/assign-symbols-0.1.1.tgz",[m
+[31m-          "integrity": "sha1-ywJZRO9OyKNpPwhunhEsdOOg/tk="[m
+[31m-        },[m
+[31m-        "kind-of": {[m
+[31m-          "version": "5.1.0",[m
+[31m-          "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-5.1.0.tgz",[m
+[31m-          "integrity": "sha512-NGEErnH6F2vUuXDh+OlbcKW7/wOcfdRHaZ7VWtqCztfHri/++YKmP51OdWeGPuqCOba6kk2OTe5d02VmTB80Pw=="[m
+[31m-        }[m
+[31m-      }[m
+[31m-    },[m
+     "assign-symbols": {[m
+       "version": "1.0.0",[m
+       "resolved": "https://registry.npmjs.org/assign-symbols/-/assign-symbols-1.0.0.tgz",[m
+[36m@@ -3951,11 +3924,6 @@[m
+       "resolved": "https://registry.npmjs.org/big-integer/-/big-integer-1.6.44.tgz",[m
+       "integrity": "sha512-7MzElZPTyJ2fNvBkPxtFQ2fWIkVmuzw41+BZHSzpEq3ymB2MfeKp1+yXl/tS75xCx+WnyV+yb0kp+K1C3UNwmQ=="[m
+     },[m
+[31m-    "bignumber.js": {[m
+[31m-      "version": "9.0.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/bignumber.js/-/bignumber.js-9.0.0.tgz",[m
+[31m-      "integrity": "sha512-t/OYhhJ2SD+YGBQcjY8GzzDHEk9f3nerxjtfa6tlMXfe7frs/WozhvCNoGvpM0P3bNf3Gq5ZRMlGr5f3r4/N8A=="[m
+[31m-    },[m
+     "binary-extensions": {[m
+       "version": "1.13.1",[m
+       "resolved": "https://registry.npmjs.org/binary-extensions/-/binary-extensions-1.13.1.tgz",[m
+[36m@@ -3966,10 +3934,10 @@[m
+       "resolved": "https://registry.npmjs.org/blueimp-md5/-/blueimp-md5-2.12.0.tgz",[m
+       "integrity": "sha512-zo+HIdIhzojv6F1siQPqPFROyVy7C50KzHv/k/Iz+BtvtVzSHXiMXOpq2wCfNkeBqdCv+V8XOV96tsEt2W/3rQ=="[m
+     },[m
+[31m-    "bn.js": {[m
+[31m-      "version": "4.11.8",[m
+[31m-      "resolved": "https://registry.npmjs.org/bn.js/-/bn.js-4.11.8.tgz",[m
+[31m-      "integrity": "sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA=="[m
+[32m+[m[32m    "boolbase": {[m
+[32m+[m[32m      "version": "1.0.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz",[m
+[32m+[m[32m      "integrity": "sha1-aN/1++YMUes3cl6p4+0xDcwed24="[m
+     },[m
+     "bplist-creator": {[m
+       "version": "0.0.7",[m
+[36m@@ -4006,11 +3974,6 @@[m
+         "repeat-element": "^1.1.2"[m
+       }[m
+     },[m
+[31m-    "brorand": {[m
+[31m-      "version": "1.1.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz",[m
+[31m-      "integrity": "sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8="[m
+[31m-    },[m
+     "browser-process-hrtime": {[m
+       "version": "0.1.3",[m
+       "resolved": "https://registry.npmjs.org/browser-process-hrtime/-/browser-process-hrtime-0.1.3.tgz",[m
+[36m@@ -4533,10 +4496,37 @@[m
+         "which": "^1.2.9"[m
+       }[m
+     },[m
+[31m-    "crypto-js": {[m
+[31m-      "version": "3.1.8",[m
+[31m-      "resolved": "https://registry.npmjs.org/crypto-js/-/crypto-js-3.1.8.tgz",[m
+[31m-      "integrity": "sha1-cV8HC/YBTyrpkqmLOSkli3E/CNU="[m
+[32m+[m[32m    "css-select": {[m
+[32m+[m[32m      "version": "2.1.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/css-select/-/css-select-2.1.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Dqk7LQKpwLoH3VovzZnkzegqNSuAziQyNZUcrdDM401iY+R5NkGBXGmtO05/yaXQziALuPogeG0b7UAgjnTJTQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "boolbase": "^1.0.0",[m
+[32m+[m[32m        "css-what": "^3.2.1",[m
+[32m+[m[32m        "domutils": "^1.7.0",[m
+[32m+[m[32m        "nth-check": "^1.0.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "css-tree": {[m
+[32m+[m[32m      "version": "1.0.0-alpha.39",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/css-tree/-/css-tree-1.0.0-alpha.39.tgz",[m
+[32m+[m[32m      "integrity": "sha512-7UvkEYgBAHRG9Nt980lYxjsTrCyHFN53ky3wVsDkiMdVqylqRt+Zc+jm5qw7/qyOvN2dHSYtX0e4MbCCExSvnA==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "mdn-data": "2.0.6",[m
+[32m+[m[32m        "source-map": "^0.6.1"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "source-map": {[m
+[32m+[m[32m          "version": "0.6.1",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",[m
+[32m+[m[32m          "integrity": "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "css-what": {[m
+[32m+[m[32m      "version": "3.2.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/css-what/-/css-what-3.2.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-WwOrosiQTvyms+Ti5ZC5vGEK0Vod3FTt1ca+payZqvKuGJF+dq7bG63DstxtN0dpm6FxY27a/zS3Wten+gEtGw=="[m
+     },[m
+     "cssom": {[m
+       "version": "0.3.8",[m
+[36m@@ -4726,11 +4716,32 @@[m
+       "integrity": "sha512-Dj6Wk3tWyTE+Fo1rW8v0Xhwk80um6yFYKbuAxc9c3EZxIHFDYwbi34Uk42u1CdnIiVorvt4RmlSDjIPyzGC2ew==",[m
+       "dev": true[m
+     },[m
+[32m+[m[32m    "dom-serializer": {[m
+[32m+[m[32m      "version": "0.2.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/dom-serializer/-/dom-serializer-0.2.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-2/xPb3ORsQ42nHYiSunXkDjPLBaEj/xTwUO4B7XCZQTRk7EBtTOPaygh10YAAh2OI1Qrp6NWfpAhzswj0ydt9g==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "domelementtype": "^2.0.1",[m
+[32m+[m[32m        "entities": "^2.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "domelementtype": {[m
+[32m+[m[32m          "version": "2.0.1",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/domelementtype/-/domelementtype-2.0.1.tgz",[m
+[32m+[m[32m          "integrity": "sha512-5HOHUDsYZWV8FGWN0Njbr/Rn7f/eWSQi1v7+HsUVwXgn8nWWlL64zKDkS0n8ZmQ3mlWOMuXOnR+7Nx/5tMO5AQ=="[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "dom-walk": {[m
+       "version": "0.1.1",[m
+       "resolved": "https://registry.npmjs.org/dom-walk/-/dom-walk-0.1.1.tgz",[m
+       "integrity": "sha1-ZyIm3HTI95mtNTB9+TaroRrNYBg="[m
+     },[m
+[32m+[m[32m    "domelementtype": {[m
+[32m+[m[32m      "version": "1.3.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/domelementtype/-/domelementtype-1.3.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-BSKB+TSpMpFI/HOxCNr1O8aMOTZ8hT3pM3GQ0w/mWRmkhEDSFJkkyzz4XQsBV44BChwGkrDfMyjVD0eA2aFV3w=="[m
+[32m+[m[32m    },[m
+     "domexception": {[m
+       "version": "1.0.1",[m
+       "resolved": "https://registry.npmjs.org/domexception/-/domexception-1.0.1.tgz",[m
+[36m@@ -4740,6 +4751,15 @@[m
+         "webidl-conversions": "^4.0.2"[m
+       }[m
+     },[m
+[32m+[m[32m    "domutils": {[m
+[32m+[m[32m      "version": "1.7.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/domutils/-/domutils-1.7.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Lgd2XcJ/NjEw+7tFvfKxOzCYKZsdct5lczQ2ZaQY8Djz7pfAD3Gbp8ySJWtreII/vDlMVmxwa6pHmdxIYgttDg==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "dom-serializer": "0",[m
+[32m+[m[32m        "domelementtype": "1"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "ecc-jsbn": {[m
+       "version": "0.1.2",[m
+       "resolved": "https://registry.npmjs.org/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz",[m
+[36m@@ -4755,22 +4775,6 @@[m
+       "resolved": "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz",[m
+       "integrity": "sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0="[m
+     },[m
+[31m-    "elliptic": {[m
+[31m-      "version": "6.3.3",[m
+[31m-      "resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.3.3.tgz",[m
+[31m-      "integrity": "sha1-VILZZG1UvLif19mU/J4ulWiHbj8=",[m
+[31m-      "requires": {[m
+[31m-        "bn.js": "^4.4.0",[m
+[31m-        "brorand": "^1.0.1",[m
+[31m-        "hash.js": "^1.0.0",[m
+[31m-        "inherits": "^2.0.1"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "email-validator": {[m
+[31m-      "version": "2.0.4",[m
+[31m-      "resolved": "https://registry.npmjs.org/email-validator/-/email-validator-2.0.4.tgz",[m
+[31m-      "integrity": "sha512-gYCwo7kh5S3IDyZPLZf6hSS0MnZT8QmJFqYvbqlDZSbwdZlY6QZWxJ4i/6UhITOJ4XzyI647Bm2MXKCLqnJ4nQ=="[m
+[31m-    },[m
+     "emoji-regex": {[m
+       "version": "7.0.3",[m
+       "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz",[m
+[36m@@ -4797,6 +4801,11 @@[m
+         "once": "^1.4.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "entities": {[m
+[32m+[m[32m      "version": "2.0.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/entities/-/entities-2.0.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-D9f7V0JSRwIxlRI2mjMqufDrRDnx8p+eEOz7aUM9SuvF8gsBzra0/6tbjl1m8eQHrZlYj6PxqE00hZ1SAIKPLw=="[m
+[32m+[m[32m    },[m
+     "envinfo": {[m
+       "version": "5.12.1",[m
+       "resolved": "https://registry.npmjs.org/envinfo/-/envinfo-5.12.1.tgz",[m
+[36m@@ -4931,31 +4940,6 @@[m
+       "resolved": "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz",[m
+       "integrity": "sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc="[m
+     },[m
+[31m-    "ethereum-address": {[m
+[31m-      "version": "0.0.4",[m
+[31m-      "resolved": "https://registry.npmjs.org/ethereum-address/-/ethereum-address-0.0.4.tgz",[m
+[31m-      "integrity": "sha1-kXKbK8igBEu+4sBcz20EF5U+X5U=",[m
+[31m-      "requires": {[m
+[31m-        "crypto-js": "^3.1.6"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "ethers": {[m
+[31m-      "version": "4.0.36",[m
+[31m-      "resolved": "https://registry.npmjs.org/ethers/-/ethers-4.0.36.tgz",[m
+[31m-      "integrity": "sha512-rWdchEhUyXx01GiwexH6Sha97CQ9tJdQwe6FtYKxShC7VEZV41nuKt+lzCQ4OqvQwZK5PcAKaAZv2GDsCH33SA==",[m
+[31m-      "requires": {[m
+[31m-        "@types/node": "^10.3.2",[m
+[31m-        "aes-js": "3.0.0",[m
+[31m-        "bn.js": "^4.4.0",[m
+[31m-        "elliptic": "6.3.3",[m
+[31m-        "hash.js": "1.1.3",[m
+[31m-        "js-sha3": "0.5.7",[m
+[31m-        "scrypt-js": "2.0.4",[m
+[31m-        "setimmediate": "1.0.4",[m
+[31m-        "uuid": "2.0.1",[m
+[31m-        "xmlhttprequest": "1.8.0"[m
+[31m-      }[m
+[31m-    },[m
+     "event-target-shim": {[m
+       "version": "1.1.1",[m
+       "resolved": "https://registry.npmjs.org/event-target-shim/-/event-target-shim-1.1.1.tgz",[m
+[36m@@ -5420,8 +5404,7 @@[m
+         },[m
+         "ansi-regex": {[m
+           "version": "2.1.1",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "aproba": {[m
+           "version": "1.2.0",[m
+[36m@@ -5439,13 +5422,11 @@[m
+         },[m
+         "balanced-match": {[m
+           "version": "1.0.0",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "brace-expansion": {[m
+           "version": "1.1.11",[m
+           "bundled": true,[m
+[31m-          "optional": true,[m
+           "requires": {[m
+             "balanced-match": "^1.0.0",[m
+             "concat-map": "0.0.1"[m
+[36m@@ -5458,18 +5439,15 @@[m
+         },[m
+         "code-point-at": {[m
+           "version": "1.1.0",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "concat-map": {[m
+           "version": "0.0.1",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "console-control-strings": {[m
+           "version": "1.1.0",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "core-util-is": {[m
+           "version": "1.0.2",[m
+[36m@@ -5572,8 +5550,7 @@[m
+         },[m
+         "inherits": {[m
+           "version": "2.0.3",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "ini": {[m
+           "version": "1.3.5",[m
+[36m@@ -5583,7 +5560,6 @@[m
+         "is-fullwidth-code-point": {[m
+           "version": "1.0.0",[m
+           "bundled": true,[m
+[31m-          "optional": true,[m
+           "requires": {[m
+             "number-is-nan": "^1.0.0"[m
+           }[m
+[36m@@ -5596,20 +5572,17 @@[m
+         "minimatch": {[m
+           "version": "3.0.4",[m
+           "bundled": true,[m
+[31m-          "optional": true,[m
+           "requires": {[m
+             "brace-expansion": "^1.1.7"[m
+           }[m
+         },[m
+         "minimist": {[m
+           "version": "0.0.8",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "minipass": {[m
+           "version": "2.3.5",[m
+           "bundled": true,[m
+[31m-          "optional": true,[m
+           "requires": {[m
+             "safe-buffer": "^5.1.2",[m
+             "yallist": "^3.0.0"[m
+[36m@@ -5626,7 +5599,6 @@[m
+         "mkdirp": {[m
+           "version": "0.5.1",[m
+           "bundled": true,[m
+[31m-          "optional": true,[m
+           "requires": {[m
+             "minimist": "0.0.8"[m
+           }[m
+[36m@@ -5699,8 +5671,7 @@[m
+         },[m
+         "number-is-nan": {[m
+           "version": "1.0.1",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "object-assign": {[m
+           "version": "4.1.1",[m
+[36m@@ -5710,7 +5681,6 @@[m
+         "once": {[m
+           "version": "1.4.0",[m
+           "bundled": true,[m
+[31m-          "optional": true,[m
+           "requires": {[m
+             "wrappy": "1"[m
+           }[m
+[36m@@ -5786,8 +5756,7 @@[m
+         },[m
+         "safe-buffer": {[m
+           "version": "5.1.2",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "safer-buffer": {[m
+           "version": "2.1.2",[m
+[36m@@ -5817,7 +5786,6 @@[m
+         "string-width": {[m
+           "version": "1.0.2",[m
+           "bundled": true,[m
+[31m-          "optional": true,[m
+           "requires": {[m
+             "code-point-at": "^1.0.0",[m
+             "is-fullwidth-code-point": "^1.0.0",[m
+[36m@@ -5835,7 +5803,6 @@[m
+         "strip-ansi": {[m
+           "version": "3.0.1",[m
+           "bundled": true,[m
+[31m-          "optional": true,[m
+           "requires": {[m
+             "ansi-regex": "^2.0.0"[m
+           }[m
+[36m@@ -5874,13 +5841,11 @@[m
+         },[m
+         "wrappy": {[m
+           "version": "1.0.2",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         },[m
+         "yallist": {[m
+           "version": "3.0.3",[m
+[31m-          "bundled": true,[m
+[31m-          "optional": true[m
+[32m+[m[32m          "bundled": true[m
+         }[m
+       }[m
+     },[m
+[36m@@ -6122,15 +6087,6 @@[m
+         }[m
+       }[m
+     },[m
+[31m-    "hash.js": {[m
+[31m-      "version": "1.1.3",[m
+[31m-      "resolved": "https://registry.npmjs.org/hash.js/-/hash.js-1.1.3.tgz",[m
+[31m-      "integrity": "sha512-/UETyP0W22QILqS+6HowevwhEFJ3MBJnwTf75Qob9Wz9t0DPuisL8kW8YZMK62dHAKE1c1p+gY1TtOLY+USEHA==",[m
+[31m-      "requires": {[m
+[31m-        "inherits": "^2.0.3",[m
+[31m-        "minimalistic-assert": "^1.0.0"[m
+[31m-      }[m
+[31m-    },[m
+     "hoist-non-react-statics": {[m
+       "version": "1.2.0",[m
+       "resolved": "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz",[m
+[36m@@ -9373,11 +9329,6 @@[m
+       "resolved": "https://registry.npmjs.org/jetifier/-/jetifier-1.6.4.tgz",[m
+       "integrity": "sha512-+f/4OLeqY8RAmXnonI1ffeY1DR8kMNJPhv5WMFehchf7U71cjMQVKkOz1n6asz6kfVoAqKNWJz1A/18i18AcXA=="[m
+     },[m
+[31m-    "js-sha3": {[m
+[31m-      "version": "0.5.7",[m
+[31m-      "resolved": "https://registry.npmjs.org/js-sha3/-/js-sha3-0.5.7.tgz",[m
+[31m-      "integrity": "sha1-DU/9gALVMzqrr0oj7tL2N0yfKOc="[m
+[31m-    },[m
+     "js-tokens": {[m
+       "version": "4.0.0",[m
+       "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",[m
+[36m@@ -9735,6 +9686,11 @@[m
+       "resolved": "https://registry.npmjs.org/math-random/-/math-random-1.0.4.tgz",[m
+       "integrity": "sha512-rUxjysqif/BZQH2yhd5Aaq7vXMSx9NdEsQcyA07uEzIvxgI7zIr33gGsh+RU0/XjmQpCW7RsVof1vlkvQVCK5A=="[m
+     },[m
+[32m+[m[32m    "mdn-data": {[m
+[32m+[m[32m      "version": "2.0.6",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.6.tgz",[m
+[32m+[m[32m      "integrity": "sha512-rQvjv71olwNHgiTbfPZFkJtjNMciWgswYeciZhtvWLO8bmX3TnhyA62I6sTWOyZssWHJJjY6/KiWwqQsWWsqOA=="[m
+[32m+[m[32m    },[m
+     "mem": {[m
+       "version": "1.1.0",[m
+       "resolved": "https://registry.npmjs.org/mem/-/mem-1.1.0.tgz",[m
+[36m@@ -10246,11 +10202,6 @@[m
+         "dom-walk": "^0.1.0"[m
+       }[m
+     },[m
+[31m-    "minimalistic-assert": {[m
+[31m-      "version": "1.0.1",[m
+[31m-      "resolved": "https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz",[m
+[31m-      "integrity": "sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A=="[m
+[31m-    },[m
+     "minimatch": {[m
+       "version": "3.0.4",[m
+       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",[m
+[36m@@ -10504,6 +10455,14 @@[m
+         "gauge": "~1.2.5"[m
+       }[m
+     },[m
+[32m+[m[32m    "nth-check": {[m
+[32m+[m[32m      "version": "1.0.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/nth-check/-/nth-check-1.0.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "boolbase": "~1.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "nullthrows": {[m
+       "version": "1.1.1",[m
+       "resolved": "https://registry.npmjs.org/nullthrows/-/nullthrows-1.1.1.tgz",[m
+[36m@@ -11211,9 +11170,9 @@[m
+       "dev": true[m
+     },[m
+     "qs": {[m
+[31m-      "version": "6.8.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/qs/-/qs-6.8.0.tgz",[m
+[31m-      "integrity": "sha512-tPSkj8y92PfZVbinY1n84i1Qdx75lZjMQYx9WZhnkofyxzw2r7Ho39G3/aEvSUdebxpnnM4LZJCtvE/Aq3+s9w=="[m
+[32m+[m[32m      "version": "6.9.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/qs/-/qs-6.9.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Cxm7/SS/y/Z3MHWSxXb8lIFqgqBowP5JMlTUFyJN88y0SGQhVmZnqFK/PeuMX9LzUyWsqqhNxIyg0jlzq946yA=="[m
+     },[m
+     "query-string": {[m
+       "version": "6.8.2",[m
+[36m@@ -11474,23 +11433,6 @@[m
+         "prop-types": "^15.7.2"[m
+       }[m
+     },[m
+[31m-    "react-native-app-intro": {[m
+[31m-      "version": "git+https://github.com/merryjs/react-native-app-intro.git#b5bbdbbd8ff8be0842d22c77a9d857cc30e413d8",[m
+[31m-      "from": "git+https://github.com/merryjs/react-native-app-intro.git",[m
+[31m-      "requires": {[m
+[31m-        "assign-deep": "^0.4.5",[m
+[31m-        "prop-types": "^15.6.0",[m
+[31m-        "react-native-swiper": "git+https://github.com/merryjs/react-native-swiper.git"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "react-native-awesome-alerts": {[m
+[31m-      "version": "1.2.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/react-native-awesome-alerts/-/react-native-awesome-alerts-1.2.0.tgz",[m
+[31m-      "integrity": "sha512-ouxDGJ/porNkuaeqpgxIJA4jAPqHC9bJIsxLA21NA6eZhnEhbqWOprjsNqwI0/7bJxXm9baTzXESCMzwAy3eZw==",[m
+[31m-      "requires": {[m
+[31m-        "prop-types": "^15.5.10"[m
+[31m-      }[m
+[31m-    },[m
+     "react-native-camera": {[m
+       "version": "git+https://github.com/lwansbrough/react-native-camera.git#6d7e6e4d9c299e1f20f3a77d3032de63250b4713",[m
+       "from": "git+https://github.com/lwansbrough/react-native-camera.git",[m
+[36m@@ -11508,28 +11450,6 @@[m
+         "point-in-polygon": "^1.0.1"[m
+       }[m
+     },[m
+[31m-    "react-native-confirmation-code-field": {[m
+[31m-      "version": "3.9.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/react-native-confirmation-code-field/-/react-native-confirmation-code-field-3.9.0.tgz",[m
+[31m-      "integrity": "sha512-RrDLcyjuG6oTWlyUXG5Gv0/xi2kJmkeqB9cZ9RjASZ6odVdFnQIkJc8ipzJwwRmykFZIp4gozTjpun/7IUvOjg=="[m
+[31m-    },[m
+[31m-    "react-native-confirmation-code-input": {[m
+[31m-      "version": "1.0.4",[m
+[31m-      "resolved": "https://registry.npmjs.org/react-native-confirmation-code-input/-/react-native-confirmation-code-input-1.0.4.tgz",[m
+[31m-      "integrity": "sha512-WmkDws7lovEC9deYHtinwsLBv4Snem4VjHJOoXe0tNM/cgEKzuNNCOui25QHgB2OFPvcWMAnTHzyCJmEHcbnqA==",[m
+[31m-      "requires": {[m
+[31m-        "lodash": "^4.17.4",[m
+[31m-        "prop-types": "^15.5.10"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "react-native-content-loader": {[m
+[31m-      "version": "0.1.6",[m
+[31m-      "resolved": "https://registry.npmjs.org/react-native-content-loader/-/react-native-content-loader-0.1.6.tgz",[m
+[31m-      "integrity": "sha512-+gIlzNOkhwTdsc0AO6JtQ4N8OriLuDs9bX0I91UJpdRRcjCQbhafCJTO5ZnoOnLMI4hSVtbS0V3AjNSGf6iC8w==",[m
+[31m-      "requires": {[m
+[31m-        "d3-interpolate": "^1.1.5"[m
+[31m-      }[m
+[31m-    },[m
+     "react-native-dismiss-keyboard": {[m
+       "version": "1.0.0",[m
+       "resolved": "https://registry.npmjs.org/react-native-dismiss-keyboard/-/react-native-dismiss-keyboard-1.0.0.tgz",[m
+[36m@@ -11827,17 +11747,12 @@[m
+       "integrity": "sha512-pWvZFlyIHiuxLugLioq97vXiaGSovFXEyxt76wQtbq0gxv4dGXMPqYow46UmpwOgeJpBhqL1E0EKxnfJRrFz5w=="[m
+     },[m
+     "react-native-svg": {[m
+[31m-      "version": "9.7.1",[m
+[31m-      "resolved": "https://registry.npmjs.org/react-native-svg/-/react-native-svg-9.7.1.tgz",[m
+[31m-      "integrity": "sha512-Yr54SyLPCdovLCJ08V7syJUe1iKrTYG9V5wB08z6lh/9FdC2R9CtBnMyz83GDLKfzUONqqH9nN1l+o61CgD3tg=="[m
+[31m-    },[m
+[31m-    "react-native-swiper": {[m
+[31m-      "version": "git+https://github.com/merryjs/react-native-swiper.git#2051e49de8696fa96612d0262a32ec902b631394",[m
+[31m-      "from": "git+https://github.com/merryjs/react-native-swiper.git",[m
+[32m+[m[32m      "version": "12.0.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/react-native-svg/-/react-native-svg-12.0.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ZuZUHMVpF4AX1pNGvHOCZLUuMC5oG6LQnwImJTRw8avKYhpUQdGDWwqi6YtPfYszKx+DwepFeq1uWlAFMzB4qQ==",[m
+       "requires": {[m
+[31m-        "create-react-class": "^15.6.2",[m
+[31m-        "prop-types": "^15.6.0",[m
+[31m-        "react-timer-mixin": "^0.13.3"[m
+[32m+[m[32m        "css-select": "^2.1.0",[m
+[32m+[m[32m        "css-tree": "^1.0.0-alpha.39"[m
+       }[m
+     },[m
+     "react-native-tab-view": {[m
+[36m@@ -13124,11 +13039,6 @@[m
+         "object-assign": "^4.1.1"[m
+       }[m
+     },[m
+[31m-    "scrypt-js": {[m
+[31m-      "version": "2.0.4",[m
+[31m-      "resolved": "https://registry.npmjs.org/scrypt-js/-/scrypt-js-2.0.4.tgz",[m
+[31m-      "integrity": "sha512-4KsaGcPnuhtCZQCxFxN3GVYIhKFPTdLd8PLC552XwbMndtD0cjRFAhDuuydXQ0h08ZfPgzqe6EKHozpuH74iDw=="[m
+[31m-    },[m
+     "semver": {[m
+       "version": "5.7.1",[m
+       "resolved": "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz",[m
+[36m@@ -13203,11 +13113,6 @@[m
+         }[m
+       }[m
+     },[m
+[31m-    "setimmediate": {[m
+[31m-      "version": "1.0.4",[m
+[31m-      "resolved": "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.4.tgz",[m
+[31m-      "integrity": "sha1-IOgd5iLUoCWIzgyNqJc8vPHTE48="[m
+[31m-    },[m
+     "setprototypeof": {[m
+       "version": "1.1.1",[m
+       "resolved": "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.1.1.tgz",[m
+[36m@@ -14160,11 +14065,6 @@[m
+       "resolved": "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz",[m
+       "integrity": "sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM="[m
+     },[m
+[31m-    "uuid": {[m
+[31m-      "version": "2.0.1",[m
+[31m-      "resolved": "https://registry.npmjs.org/uuid/-/uuid-2.0.1.tgz",[m
+[31m-      "integrity": "sha1-wqMN7bPlNdcsz4LjQ5QaULqFM6w="[m
+[31m-    },[m
+     "validate-npm-package-license": {[m
+       "version": "3.0.4",[m
+       "resolved": "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz",[m
+[36m@@ -14366,11 +14266,6 @@[m
+       "resolved": "https://registry.npmjs.org/xmldom/-/xmldom-0.1.27.tgz",[m
+       "integrity": "sha1-1QH5ezvbQDr4757MIFcxh6rawOk="[m
+     },[m
+[31m-    "xmlhttprequest": {[m
+[31m-      "version": "1.8.0",[m
+[31m-      "resolved": "https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz",[m
+[31m-      "integrity": "sha1-Z/4HXFwk/vOfnWX197f+dRcZaPw="[m
+[31m-    },[m
+     "xpipe": {[m
+       "version": "1.0.5",[m
+       "resolved": "https://registry.npmjs.org/xpipe/-/xpipe-1.0.5.tgz",[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex c785b70..f09b754 100755[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -15,11 +15,7 @@[m
+     "@react-native-community/async-storage": "^1.4.1",[m
+     "@react-native-community/netinfo": "^4.1.3",[m
+     "axios": "^0.19.2",[m
+[31m-    "bignumber.js": "^9.0.0",[m
+     "d3-interpolate": "^1.3.2",[m
+[31m-    "email-validator": "^2.0.4",[m
+[31m-    "ethereum-address": "0.0.4",[m
+[31m-    "ethers": "^4.0.27",[m
+     "jayson": "^3.2.0",[m
+     "jetifier": "^1.6.3",[m
+     "lodash": "^4.17.15",[m
+[36m@@ -28,17 +24,11 @@[m
+     "prop-types": "^15.7.2",[m
+     "react": "^16.8.3",[m
+     "react-native": "^0.59.10",[m
+[31m-    "react-native-app-intro": "https://github.com/merryjs/react-native-app-intro",[m
+[31m-    "react-native-awesome-alerts": "^1.2.0",[m
+     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",[m
+     "react-native-chart-kit": "^3.0.0",[m
+[31m-    "react-native-confirmation-code-field": "^3.6.0",[m
+[31m-    "react-native-confirmation-code-input": "^1.0.4",[m
+[31m-    "react-native-content-loader": "^0.1.6",[m
+     "react-native-elements": "^1.1.0",[m
+     "react-native-email": "^1.0.2",[m
+     "react-native-global-props": "^1.1.5",[m
+[31m-    "react-native-iphone-x-helper": "^1.2.1",[m
+     "react-native-material-menu": "^0.5.1",[m
+     "react-native-material-ui": "^1.30.1",[m
+     "react-native-modal": "^11.5.4",[m
+[36m@@ -54,7 +44,7 @@[m
+     "react-native-simple-toast": "0.0.8",[m
+     "react-native-splash-screen": "^3.2.0",[m
+     "react-native-sqlite-storage": "^3.3.10",[m
+[31m-    "react-native-svg": "^9.5.1",[m
+[32m+[m[32m    "react-native-svg": "^12.0.3",[m
+     "react-native-vector-icons": "^6.6.0",[m
+     "react-native-version-check": "^3.3.0",[m
+     "react-native-webview": "^8.0.3",[m
+[1mdiff --git a/src/Components/CreateWallet/createwallet.js b/src/Components/CreateWallet/createwallet.js[m
+[1mindex 9acff85..af84394 100755[m
+[1m--- a/src/Components/CreateWallet/createwallet.js[m
+[1m+++ b/src/Components/CreateWallet/createwallet.js[m
+[36m@@ -5,7 +5,6 @@[m [mimport {[m
+     View,[m
+     Image,[m
+     ImageBackground,[m
+[31m-    Alert,[m
+     BackHandler, ScrollView, Dimensions, Platform[m
+ } from 'react-native';[m
+ var width_screen = Dimensions.get('window').width;[m
+[36m@@ -13,10 +12,9 @@[m [mvar height_screen = Dimensions.get('window').height;[m
+ import { Input, Button } from 'react-native-elements';[m
+ import { Actions } from 'react-native-router-flux';[m
+ import AsyncStorage from '@react-native-community/async-storage';[m
+[31m-import bg from '../../../assets/bgimage.png';[m
+[31m-import wallet from '../../../assets/token1.png';[m
+[31m-import { ifIphoneX } from 'react-native-iphone-x-helper';[m
+[32m+[m[32mimport wallet from '../../../assets/ver.png';[m
+ import Toast from 'react-native-simple-toast';[m
+[32m+[m[32mimport splashs from '../../../assets/splashs.png';[m
+ [m
+ export default class createwallet extends Component {[m
+     constructor(props) {[m
+[36m@@ -26,21 +24,50 @@[m [mexport default class createwallet extends Component {[m
+             passwordText: ''[m
+         }[m
+         console.disableYellowBox = true;[m
+[32m+[m[32m        this.handleBackButton = this.handleBackButton.bind(this);[m
+     };[m
+ [m
+     goToHomePage = () => {[m
+[31m-        // if (this.state.usernameText == "" || this.state.passwordText == "") {[m
+[31m-        //     Toast.show("Fields can't be left empty", Toast.SHORT);[m
+[31m-        // } else if (this.state.usernameText != "admin") {[m
+[31m-        //     Toast.show("UserName has to be admin", Toast.SHORT);[m
+[31m-        // } else if (this.state.passwordText != "123456") {[m
+[31m-        //     Toast.show("Please Enter Password 123456", Toast.SHORT);[m
+[31m-        // } else {[m
+[31m-        AsyncStorage.setItem("Login", "1");[m
+[31m-        Actions.HomePage();[m
+[31m-        // }[m
+[32m+[m[32m        if (this.state.usernameText == "" || this.state.passwordText == "") {[m
+[32m+[m[32m            Toast.show("Fields can't be left empty", Toast.SHORT);[m
+[32m+[m[32m        } else if (this.state.usernameText != "admin") {[m
+[32m+[m[32m            Toast.show("UserName has to be admin", Toast.SHORT);[m
+[32m+[m[32m        } else if (this.state.passwordText != "123456") {[m
+[32m+[m[32m            Toast.show("Please Enter Password 123456", Toast.SHORT);[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m            AsyncStorage.setItem("Login", "1");[m
+[32m+[m[32m            AsyncStorage.setItem("LogOut", "0");[m
+[32m+[m[32m            Actions.HomePage();[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    componentDidMount() {[m
+[32m+[m[32m        BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);[m
+     }[m
+ [m
+[32m+[m[32m    componentWillUnmount() {[m
+[32m+[m[32m        BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    handleBackButton = () => {[m
+[32m+[m[32m        Alert.alert([m
+[32m+[m[32m            'Exit App',[m
+[32m+[m[32m            'Exiting the application?', [{[m
+[32m+[m[32m                text: 'Cancel',[m
+[32m+[m[32m                onPress: () => console.log('Cancel Pressed'),[m
+[32m+[m[32m                style: 'cancel'[m
+[32m+[m[32m            }, {[m
+[32m+[m[32m                text: 'OK',[m
+[32m+[m[32m                onPress: () => BackHandler.exitApp()[m
+[32m+[m[32m            },], {[m
+[32m+[m[32m                cancelable: false[m
+[32m+[m[32m            }[m
+[32m+[m[32m        )[m
+[32m+[m[32m        return true;[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+ [m
+     handleUsername = (text) => {[m
+         console.log("handle text", text);[m
+[36m@@ -60,9 +87,9 @@[m [mexport default class createwallet extends Component {[m
+         return ([m
+             <ScrollView>[m
+                 <View style={styles.container}>[m
+[31m-                    {/* <ImageBackground[m
+[31m-                        source={bg}[m
+[31m-                        style={{ backgroundColor: '#fff', flex: 1 }}> */}[m
+[32m+[m[32m                    <ImageBackground[m
+[32m+[m[32m                        source={splashs}[m
+[32m+[m[32m                        style={{ backgroundColor: '#fff', flex: 1 }}>[m
+ [m
+                         <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: '28%' }}>[m
+                             <Image source={wallet} style={{ height: 70, width: 70, justifyContent: 'center', alignItems: 'center', marginLeft: '3%' }} />[m
+[36m@@ -71,25 +98,26 @@[m [mexport default class createwallet extends Component {[m
+                             Login Screen[m
+                          </Text>[m
+ [m
+[31m-                        <View style={{ width: '80%', marginTop: '10%' }}>[m
+[32m+[m[32m                        <View style={{ marginLeft: '4%', marginRight: '4%' }}>[m
+                             <Input[m
+                                 placeholder='Username'[m
+                                 inputContainerStyle={{ borderBottomColor: 'white' }}[m
+                                 style={{ color: 'white' }}[m
+                                 placeholderTextColor="white"[m
+[32m+[m[32m                                containerStyle={{ marginTop: '10%' }}[m
+                                 keyboardType="ascii-capable"[m
+                                 onChangeText={this.handleUsername}[m
+                             />[m
+                         </View>[m
+ [m
+[31m-                        <View style={{ width: '80%', marginTop: '10%' }}>[m
+[32m+[m[32m                        <View style={{ marginLeft: '4%', marginRight: '4%' }}>[m
+                             <Input[m
+                                 secureTextEntry={true}[m
+                                 placeholder='password'[m
+                                 inputContainerStyle={{ borderBottomColor: 'white' }}[m
+                                 style={{ color: 'white' }}[m
+                                 placeholderTextColor="white"[m
+[31m-                                keyboardType="ascii-capable"[m
+[32m+[m[32m                                keyboardType="decimal-pad"[m
+                                 onChangeText={this.handlePassword}[m
+                             />[m
+                         </View>[m
+[36m@@ -112,9 +140,9 @@[m [mexport default class createwallet extends Component {[m
+                                 }}[m
+                                 buttonStyle={{ borderWidth: 1, borderColor: '#0f15a8', borderRadius: 20, width: 300, alignSelf: 'center', backgroundColor: '#0f15a8' }} />[m
+                         </View>[m
+[31m-                    {/* </ImageBackground> */}[m
+[32m+[m[32m                    </ImageBackground>[m
+                 </View>[m
+[31m-            </ScrollView>[m
+[32m+[m[32m            </ScrollView >[m
+ [m
+         )[m
+     }[m
+[36m@@ -129,7 +157,7 @@[m [mconst styles = StyleSheet.create({[m
+     },[m
+     button1: {[m
+         flex: 1,[m
+[31m-        marginTop: '15%'[m
+[32m+[m[32m        marginTop: '25%'[m
+     }[m
+ });[m
+ [m
+[1mdiff --git a/src/Components/MainScreen/HomePage.js b/src/Components/MainScreen/HomePage.js[m
+[1mindex 616a9ff..e386b44 100644[m
+[1m--- a/src/Components/MainScreen/HomePage.js[m
+[1m+++ b/src/Components/MainScreen/HomePage.js[m
+[36m@@ -1,24 +1,20 @@[m
+ import React, { Component } from 'react';[m
+ import {[m
+     Text, View, FlatList, Image, Dimensions, StyleSheet,[m
+[31m-    Alert, Platform, TouchableOpacity, ScrollView[m
+[32m+[m[32m    Platform, TouchableOpacity, ScrollView, ActivityIndicator, RefreshControl[m
+ } from 'react-native';;[m
+ var width_screen = Dimensions.get('screen').width;[m
+ var height_screen = Dimensions.get('screen').height;[m
+ import { ifIphoneX } from 'react-native-iphone-x-helper';[m
+ import { Actions } from 'react-native-router-flux';[m
+[31m-import { Card, Icon } from 'react-native-elements';[m
+[32m+[m[32mimport { Card, Icon, Button, Input } from 'react-native-elements';[m
+ import AsyncStorage from '@react-native-community/async-storage';[m
+[31m-import AwesomeAlert from 'react-native-awesome-alerts';[m
+[31m-import add from '../../../assets/add.png';[m
+ import { SCLAlert, SCLAlertButton } from 'react-native-scl-alert';[m
+ import check from '../../../assets/check.png';[m
+ import Toast from 'react-native-simple-toast';[m
+ import axios from "axios";[m
+[31m-import Modal from "react-native-modal";[m
+ import RBSheet from "react-native-raw-bottom-sheet";[m
+ [m
+[31m-[m
+ export default class HomePage extends Component {[m
+     constructor(props) {[m
+         super(props);[m
+[36m@@ -27,11 +23,15 @@[m [mexport default class HomePage extends Component {[m
+             dataSource: [],[m
+             showAlert: false,[m
+             dialogTitle: "Do You Really Want To Delete ?",[m
+[31m-            AddEmployee:''[m
+[31m-            // plusBtnvisible: true[m
+[32m+[m[32m            AddEmployee: '',[m
+[32m+[m[32m            emp_Id: '',[m
+[32m+[m[32m            emp_Name: '',[m
+[32m+[m[32m            emp_Sal: '',[m
+[32m+[m[32m            emp_age: '',[m
+[32m+[m[32m            visible: true,[m
+[32m+[m[32m            refreshing: false[m
+         }[m
+         console.disableYellowBox = true;[m
+[31m-[m
+     }[m
+ [m
+     componentDidMount() {[m
+[36m@@ -42,19 +42,21 @@[m [mexport default class HomePage extends Component {[m
+         fetch("http://dummy.restapiexample.com/api/v1/employees")[m
+             .then((response) => response.json())[m
+             .then((responseJson) => {[m
+[31m-                console.log("employessss list.>>>>", responseJson);[m
+                 this.setState({[m
+[31m-                    dataSource: responseJson.data[m
+[32m+[m[32m                    dataSource: responseJson.data,[m
+[32m+[m[32m                    visible: false,[m
+[32m+[m[32m                    refreshing: false[m
+                 })[m
+[31m-                console.log("this.state.datasource[i]", this.state.dataSource);[m
+             })[m
+             .catch((error) => {[m
+                 console.log("error>xoxoxoxox", error);[m
+[32m+[m[32m                this.setState({ visible: false })[m
+             });[m
+     }[m
+ [m
+     goToLogoutSection = () => {[m
+         AsyncStorage.setItem("LogOut", "1");[m
+[32m+[m[32m        AsyncStorage.setItem("Login", "0");[m
+         Actions.createwallet();[m
+     }[m
+ [m
+[36m@@ -63,7 +65,6 @@[m [mexport default class HomePage extends Component {[m
+         this.setState({[m
+             idToDelete: id,[m
+             showAlert: true[m
+[31m-            // plusBtnvisible: false[m
+         })[m
+     }[m
+ [m
+[36m@@ -77,32 +78,21 @@[m [mexport default class HomePage extends Component {[m
+     yesBtn = () => {[m
+         console.log("idtodelete>>>>>", parseInt(this.state.idToDelete));[m
+         var id_to_del = parseInt(this.state.idToDelete)[m
+[31m-        // axios({[m
+[31m-        //     method: "DELETE",[m
+[31m-        //     url: 'http://dummy.restapiexample.com/api/v1/delete/' + id_to_del[m
+[31m-        // }).then(result => {[m
+[31m-        //     console.log("successfully deleted", result);[m
+[31m-        // }).catch(err => {[m
+[31m-        //     console.log("error in deleting err", err);[m
+[31m-        // })[m
+[31m-[m
+         fetch('http://dummy.restapiexample.com/api/v1/delete/' + id_to_del, {[m
+             method: 'DELETE'[m
+         }).then((response) => {[m
+[31m-            console.log("response>>>>", response.json());[m
+[31m-            if (response.status == "success") {[m
+[32m+[m[32m            if (response.status == 200) {[m
+                 console.log("employessss list.>>>> with token id deleted", response);[m
+[31m-                // Actions.refresh({ key: Math.random() })[m
+[32m+[m[32m                Actions.refresh({ key: Math.random() })[m
+             } else {[m
+                 this.setState({ showAlert: false })[m
+                 Toast.show("Error in deleting employee,Try after some time", Toast.SHORT);[m
+             }[m
+[31m-        })[m
+[31m-            .catch((error) => {[m
+[31m-                this.setState({ showAlert: false })[m
+[31m-                Toast.show("Error in deleting employee,Try after some time", Toast.SHORT);[m
+[31m-                console.log("error>xoxoxoxox", error);[m
+[31m-            });[m
+[32m+[m[32m        }).catch((error) => {[m
+[32m+[m[32m            this.setState({ showAlert: false })[m
+[32m+[m[32m            Toast.show("Error in deleting employee,Try after some time", Toast.SHORT);[m
+[32m+[m[32m            console.log("error>xoxoxoxox", error);[m
+[32m+[m[32m        });[m
+     }[m
+ [m
+     noBtn = () => {[m
+[36m@@ -111,24 +101,22 @@[m [mexport default class HomePage extends Component {[m
+         })[m
+     }[m
+ [m
+[32m+[m
+     renderItem = ({ item }) => {[m
+[31m-        console.log("item employesssss>>>>>>>>", item);[m
+         return ([m
+             <ScrollView>[m
+                 <TouchableOpacity[m
+[31m-                    onLongPress={() => this.handlerLongClick(item.id)} activeOpacity={0.6}>[m
+[32m+[m[32m                    onLongPress={() => this.handlerLongClick(item.id)} activeOpacity={0.4}>[m
+                     <Card containerStyle={styles.card}>[m
+[31m-                        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>[m
+[31m-                            <View style={{ flexDirection: 'row', flex: 4 }}>[m
+[31m-                                <Text style={{ flex: 1, fontSize: 13, fontWeight: 'bold', color: 'black' }}>[m
+[31m-                                    {item.id}</Text>[m
+[31m-                                <Text style={{ flex: 1, fontSize: 13, fontWeight: 'bold', color: 'black' }}>[m
+[31m-                                    {item.employee_name}</Text>[m
+[31m-                                <Text style={{ flex: 1, fontSize: 13, fontWeight: 'bold', color: '#808080' }}>[m
+[31m-                                    {item.employee_salary}</Text>[m
+[31m-                                <Text style={{ fontSize: 13, flex: 1, fontWeight: 'bold', color: "green" }}>[m
+[31m-                                    {item.employee_age} </Text>[m
+[31m-                            </View>[m
+[32m+[m[32m                        <View style={{ flex: 4, flexDirection: 'row', justifyContent: 'space-evenly' }}>[m
+[32m+[m[32m                            <Text style={{ flex: 1, fontSize: 13, fontWeight: 'bold', color: '#808080' }}>[m
+[32m+[m[32m                                {item.id}</Text>[m
+[32m+[m[32m                            <Text style={{ flex: 1, fontSize: 13, fontWeight: 'bold', color: '#808080', marginRight: '3%' }}>[m
+[32m+[m[32m                                {item.employee_name}</Text>[m
+[32m+[m[32m                            <Text style={{ flex: 1, fontSize: 13, fontWeight: 'bold', color: '#808080' }}>[m
+[32m+[m[32m                                {item.employee_salary}</Text>[m
+[32m+[m[32m                            <Text style={{ fontSize: 13, flex: 1, fontWeight: 'bold', color: "#808080" }}>[m
+[32m+[m[32m                                {item.employee_age} </Text>[m
+                         </View>[m
+                     </Card>[m
+                 </TouchableOpacity>[m
+[36m@@ -137,45 +125,85 @@[m [mexport default class HomePage extends Component {[m
+     }[m
+ [m
+ [m
+[31m-    addButton=()=>{[m
+[31m-        fetch('http://dummy.restapiexample.com/api/v1/create', {[m
+[31m-            method: 'POST',[m
+[31m-            body: { "name": "manyash", "salary": "200000", "age": "28" }[m
+[31m-        }).then((response) => {[m
+[31m-            console.log("response>>>>", response);[m
+[32m+[m[32m    addButton = () => {[m
+[32m+[m[32m        if (this.state.emp_Id == "" || this.state.emp_Name == "" || this.state.emp_Sal == "" || this.state.emp_age == "") {[m
+[32m+[m[32m            Toast.show("Fields can't be left empty", Toast.SHORT);[m
+[32m+[m[32m        } else if (!this.state.emp_Id) {[m
+[32m+[m[32m            Toast.show("Enter Employee Id", Toast.SHORT);[m
+[32m+[m[32m        } else if (!this.state.emp_Name) {[m
+[32m+[m[32m            Toast.show("Enter Employee Name", Toast.SHORT);[m
+[32m+[m[32m        } else if (!this.state.emp_Sal) {[m
+[32m+[m[32m            Toast.show("Enter Employee Salary", Toast.SHORT);[m
+[32m+[m[32m        } else if (!this.state.emp_age) {[m
+[32m+[m[32m            Toast.show("Enter Employee Age", Toast.SHORT);[m
+[32m+[m[32m        } else {[m
+             this.RBSheet.close();[m
+[31m-             Actions.refresh({ key: Math.random() })[m
+[31m-        })[m
+[31m-            .catch((error) => {[m
+[31m-                Toast.show("Error in adding employee,Try after some time", Toast.SHORT);[m
+[31m-                console.log("error>xoxoxoxox", error);[m
+[32m+[m[32m            axios.post('http://dummy.restapiexample.com/api/v1/create', {[m
+[32m+[m[32m                "name": this.state.emp_Name,[m
+[32m+[m[32m                "salary": this.state.emp_Sal,[m
+[32m+[m[32m                "age": this.state.emp_age,[m
+[32m+[m[32m                "id": this.state.emp_Id[m
+[32m+[m[32m            }).then(response => {[m
+[32m+[m[32m                if (response == "success") {[m
+[32m+[m[32m                    console.log("response in adding employeee", response);[m
+[32m+[m[32m                    Actions.refresh({ key: Math.random() })[m
+[32m+[m[32m                } else {[m
+[32m+[m[32m                    Toast.show("Error in saving new record", Toast.SHORT);[m
+[32m+[m[32m                }[m
+[32m+[m[32m            }).catch(error => {[m
+[32m+[m[32m                console.log("response eerror ", error);[m
+             });[m
+[31m-     }[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+ [m
+ [m
+     renderSend() {[m
+         return ([m
+             <ScrollView>[m
+                 <View>[m
+[31m-                    <View style={{ flexDirection: 'column', margin: '5%' }}>[m
+[31m-                        <Text style={{ fontSize: 15, fontWeight: '900', color: 'black', marginTop: '6%' }}>From</Text>[m
+[31m-                        <Text style={{ fontSize: 12, color: '#666666', fontWeight: '600' }}>hyeee</Text>[m
+[31m-                        <Text style={{ fontSize: 17, fontWeight: '900', color: 'black', marginTop: '6%' }}>To</Text>[m
+[31m-                        <Text style={{ fontSize: 12, color: '#666666', fontWeight: '600' }}>this.state.recieverAddress</Text>[m
+[31m-                        <Text style={{ fontSize: 15, fontWeight: '900', color: 'black', marginTop: '6%' }}>Approximate Fee</Text>[m
+[31m-                        <Text style={{ fontSize: 12, color: '#666666', fontWeight: '600' }}>hyeeeee</Text>[m
+[31m-                        <Text style={{ fontSize: 15, fontWeight: '900', color: 'black', marginTop: '6%' }}>Entered Amount</Text>[m
+[31m-                        <Text style={{ fontSize: 12, color: '#666666', fontWeight: '600' }}>hyeee</Text>[m
+[31m-                        <Text style={{ fontSize: 15, color: 'black', fontWeight: '900', marginTop: '6%' }}>Total Deducted Amount</Text>[m
+[31m-                        <Text style={{ fontSize: 12, color: '#666666', fontWeight: '600' }}>byeeee</Text>[m
+[31m-                        <Text style={{ fontSize: 15, color: 'black', fontWeight: '900', marginTop: '6%' }}>Pin</Text>[m
+[32m+[m[32m                    <Text style={{ color: '#204060', alignSelf: 'center', fontSize: 20, marginTop: '10%' }}>[m
+[32m+[m[32m                        Add New Employee[m
+[32m+[m[32m                    </Text>[m
+[32m+[m[32m                    <View style={{ flexDirection: 'column', margin: '15%' }}>[m
+[32m+[m[32m                        <Input[m
+[32m+[m[32m                            placeholderTextColor="#204060"[m
+[32m+[m[32m                            placeholder="Enter Employee Id"[m
+[32m+[m[32m                            onChangeText={(text) => { this.setState({ emp_Id: text.trim() }) }}[m
+[32m+[m[32m                            inputStyle={{ color: '#000', fontSize: 15 }}[m
+[32m+[m[32m                            keyboardType="numeric"[m
+[32m+[m[32m                            maxLength={3}>[m
+[32m+[m[32m                        </Input>[m
+[32m+[m[32m                        <Input[m
+[32m+[m[32m                            placeholderTextColor="#204060"[m
+[32m+[m[32m                            placeholder="Enter Employee Name"[m
+[32m+[m[32m                            onChangeText={(text) => { this.setState({ emp_Name: text.trim() }) }}[m
+[32m+[m[32m                            inputStyle={{ color: '#000', fontSize: 15 }}[m
+[32m+[m[32m                            keyboardType="ascii-capable"[m
+[32m+[m[32m                        >[m
+[32m+[m[32m                        </Input>[m
+[32m+[m[32m                        <Input[m
+[32m+[m[32m                            placeholderTextColor="#204060"[m
+[32m+[m[32m                            placeholder="Enter Employee Salary"[m
+[32m+[m[32m                            onChangeText={(text) => { this.setState({ emp_Sal: text.trim() }) }}[m
+[32m+[m[32m                            inputStyle={{ color: '#000', fontSize: 15 }}[m
+[32m+[m[32m                            keyboardType="numeric"[m
+[32m+[m[32m                        >[m
+[32m+[m[32m                        </Input>[m
+[32m+[m[32m                        <Input[m
+[32m+[m[32m                            placeholderTextColor="#204060"[m
+[32m+[m[32m                            placeholder="Enter Employee Age"[m
+[32m+[m[32m                            onChangeText={(text) => { this.setState({ emp_age: text.trim() }) }}[m
+[32m+[m[32m                            inputStyle={{ color: '#000', fontSize: 15 }}[m
+[32m+[m[32m                            keyboardType="numeric"[m
+[32m+[m[32m                            maxLength={2}>[m
+[32m+[m[32m                        </Input>[m
+ [m
+[31m-                        <View style={{ marginTop: '10%', marginBottom: '6%' }}>[m
+[32m+[m[32m                        <View style={{ marginTop: '15%', marginBottom: '5%' }}>[m
+                             <Button[m
+                                 title="Add"[m
+                                 onPress={this.addButton}[m
+                                 titleStyle={{ color: 'white', fontWeight: '500' }}[m
+[31m-                                buttonStyle={{ borderRadius: 5, width: 150, alignSelf: 'center', backgroundColor: '#5364CD' }} />[m
+[32m+[m[32m                                buttonStyle={{ borderRadius: 5, width: 150, alignSelf: 'center', backgroundColor: '#204060' }} />[m
+                         </View>[m
+                     </View>[m
+                 </View>[m
+[36m@@ -184,19 +212,25 @@[m [mexport default class HomePage extends Component {[m
+     }[m
+ [m
+ [m
+[32m+[m[32m    _onRefresh = () => {[m
+[32m+[m[32m        this.setState({ refreshing: true })[m
+[32m+[m[32m        this.fetchHistory();[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+     addbtn = () => {[m
+[31m-       this.RBSheet.open();[m
+[32m+[m[32m        this.RBSheet.open();[m
+     }[m
+ [m
+     render() {[m
+         return ([m
+             <View style={{ backgroundColor: 'white', flex: 1 }} >[m
+                 <View style={styles.header}>[m
+[31m-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>[m
+[31m-                        <Text style={{ color: '#ffffff', alignSelf: 'center', fontSize: 17, marginLeft: '5%' }}>[m
+[31m-                            Employees List[m
+[32m+[m[32m                    <Text style={{ color: '#ffffff', alignSelf: 'center', fontSize: 17, marginLeft: '3%' }}>[m
+[32m+[m[32m                        Employees List[m
+                         </Text>[m
+ [m
+[32m+[m[32m                    <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>[m
+                         <Icon[m
+                             name='plus'[m
+                             size={25}[m
+[36m@@ -204,53 +238,56 @@[m [mexport default class HomePage extends Component {[m
+                             color='white'[m
+                             underlayColor="transparent"[m
+                             onPress={this.addbtn}[m
+[31m-                            containerStyle={{ marginRight: '10%', marginTop: '3%' }} />[m
+[32m+[m[32m                            containerStyle={{ margin: 10 }} />[m
+ [m
+[31m-                        {/* {(this.state.plusBtnvisible == false) &&[m
+[31m-                            <Icon[m
+[31m-                                name='trash'[m
+[31m-                                size={25}[m
+[31m-                                type='font-awesome'[m
+[31m-                                color='white'[m
+[31m-                                underlayColor="transparent"[m
+[31m-                                onPress={this.iconbtn}[m
+[31m-                                containerStyle={{ marginRight: '10%', marginTop: '3%' }}[m
+[31m-                            />} */}[m
+[31m-                    </View>[m
+[31m-                    <TouchableOpacity onPress={this.goToLogoutSection}>[m
+[31m-                        <Text style={{ color: 'white', fontSize: 14, fontWeight: '500', margin: 10 }}>[m
+[31m-                            LOGOUT[m
+[32m+[m[32m                        <TouchableOpacity onPress={this.goToLogoutSection}>[m
+[32m+[m[32m                            <Text style={{ color: 'white', fontSize: 14, fontWeight: '500', margin: 11 }}>[m
+[32m+[m[32m                                LOGOUT[m
+                         </Text>[m
+[31m-                    </TouchableOpacity>[m
+[31m-                </View>[m
+[32m+[m[32m                        </TouchableOpacity>[m
+[32m+[m[32m                    </View>[m
+ [m
+[31m-                <View style={{ marginBottom: '0.5%' }}>[m
+[31m-                    <FlatList[m
+[31m-                        data={this.state.dataSource}[m
+[31m-                        renderItem={this.renderItem}[m
+[31m-                        keyExtractor={(item, index) => index}[m
+[31m-                    >[m
+[31m-                    </FlatList>[m
+                 </View>[m
+ [m
+[32m+[m[32m                {(this.state.visible == true) ?[m
+[32m+[m[32m                    <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>[m
+[32m+[m[32m                        <ActivityIndicator size='large' color='#0f15a8' animating={this.state.visible}></ActivityIndicator>[m
+[32m+[m[32m                    </View> :[m
+[32m+[m[32m                    <View>[m
+[32m+[m[32m                        <ScrollView style={styles.scrollviewstyle}[m
+[32m+[m[32m                            refreshControl={[m
+[32m+[m[32m                                < RefreshControl[m
+[32m+[m[32m                                    refreshing={this.state.refreshing}[m
+[32m+[m[32m                                    onRefresh={this._onRefresh} />[m
+[32m+[m[32m                            }>[m
+[32m+[m[32m                            <View>[m
+[32m+[m[32m                                <FlatList[m
+[32m+[m[32m                                    data={this.state.dataSource}[m
+[32m+[m[32m                                    renderItem={this.renderItem}[m
+[32m+[m[32m                                    keyExtractor={(item, index) => index}>[m
+[32m+[m[32m                                </FlatList>[m
+[32m+[m[32m                            </View>[m
+[32m+[m[32m                        </ScrollView>[m
+[32m+[m[32m                    </View>}[m
+[32m+[m
+                 <RBSheet[m
+[31m-                        ref={ref => {[m
+[31m-                            this.RBSheet = ref;[m
+[31m-                        }}[m
+[31m-                        closeOnPressBack={true}[m
+[31m-                        height={height_screen}[m
+[31m-                        duration={400}>[m
+[31m-                        {this.renderSend()}[m
+[31m-                    </RBSheet>[m
+[32m+[m[32m                    ref={ref => {[m
+[32m+[m[32m                        this.RBSheet = ref;[m
+[32m+[m[32m                    }}[m
+[32m+[m[32m                    closeOnPressBack={true}[m
+[32m+[m[32m                    height={height_screen / 1.8}[m
+[32m+[m[32m                    duration={400}>[m
+[32m+[m[32m                    {this.renderSend()}[m
+[32m+[m[32m                </RBSheet>[m
+ [m
+ [m
+[31m-                <View style={{ height: 150, width: 150 }}>[m
+[32m+[m[32m                <View style={styles.containerss}>[m
+                     <SCLAlert[m
+                         show={this.state.showAlert}[m
+                         onRequestClose={this.handleClose}[m
+                         theme="info"[m
+                         title="Are You Sure You Want To Delete?"[m
+[31m-                        titleStyle={{ fontSize: 18, color: '#008000', fontWeight: '700' }}[m
+[32m+[m[32m                        titleStyle={{ fontSize: 16, color: '#008000', fontWeight: '700' }}[m
+                         headerIconComponent={<Image[m
+                             source={check}[m
+                             style={{ width: 80, height: 80 }}>[m
+[36m@@ -259,7 +296,7 @@[m [mexport default class HomePage extends Component {[m
+                         <SCLAlertButton theme="default" onPress={this.noBtn}>NO</SCLAlertButton>[m
+                     </SCLAlert>[m
+                 </View>[m
+[31m-            </View >[m
+[32m+[m[32m            </View>[m
+         )[m
+     }[m
+ }[m
+[36m@@ -290,15 +327,22 @@[m [mconst styles = StyleSheet.create({[m
+             },[m
+         }),[m
+     },[m
+[31m-    card:[m
+[31m-    {[m
+[31m-        flex: 4,[m
+[32m+[m[32m    card: {[m
+         marginBottom: 2,[m
+[31m-        borderRadius: 25,[m
+[32m+[m[32m        borderRadius: 20,[m
+         backgroundColor: 'transparent',[m
+         elevation: 0,[m
+         borderWidth: 1,[m
+[31m-        borderColor: 'grey',[m
+[32m+[m[32m        borderColor: 'black',[m
+[32m+[m[32m    },[m
+[32m+[m[32m    containerss: {[m
+[32m+[m[32m        flex: 1,[m
+[32m+[m[32m        backgroundColor: '#fff',[m
+[32m+[m[32m        alignItems: 'center',[m
+[32m+[m[32m        justifyContent: 'center',[m
+[32m+[m[32m    },[m
+[32m+[m[32m    scrollviewstyle: {[m
+[32m+[m[32m        marginBottom: '8%'[m
+     }[m
+ });[m
+ [m
+[1mdiff --git a/src/Components/splashcomponent/splash.js b/src/Components/splashcomponent/splash.js[m
+[1mindex 23587d9..6e3fefd 100755[m
+[1m--- a/src/Components/splashcomponent/splash.js[m
+[1m+++ b/src/Components/splashcomponent/splash.js[m
+[36m@@ -26,17 +26,19 @@[m [mexport default class splash extends Component {[m
+     componentDidMount() {[m
+ [m
+         AsyncStorage.getItem("Login").then((x4) => {[m
+[31m-                        if (x4) {[m
+[31m-                            this.state.loginState = x4[m
+[31m-                        } else { }[m
+[31m-                    });[m
+[31m-            [m
+[31m-                    AsyncStorage.getItem("LogOut").then((x1) => {[m
+[31m-                        if (x1) {[m
+[31m-                            this.state.logoutState = x1[m
+[31m-                        } else { }[m
+[31m-                    });[m
+[31m-            [m
+[32m+[m[32m            if (x4) {[m
+[32m+[m[32m                this.state.loginState = x4[m
+[32m+[m[32m            }[m
+[32m+[m[32m            console.log("this.sytate.loginstate", this.state.loginState);[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m[32m        AsyncStorage.getItem("LogOut").then((x1) => {[m
+[32m+[m[32m            if (x1) {[m
+[32m+[m[32m                this.state.logoutState = x1[m
+[32m+[m[32m            }[m
+[32m+[m[32m            console.log("this.state.logoutstate", this.state.logOutState);[m
+[32m+[m[32m        });[m
+[32m+[m
+         SplashScreen.hide();[m
+         Animated.spring(this.animatedValue, {[m
+             toValue: 1,[m
+[36m@@ -48,13 +50,11 @@[m [mexport default class splash extends Component {[m
+             delay: 200,[m
+             duration: 4000[m
+         }).start((x) => {[m
+[31m-            setTimeout(() => {[m
+[31m-                                if (this.state.loginState == "1") {[m
+[31m-                                    Actions.replace("HomePage");[m
+[31m-                                } else {[m
+[31m-                                    Actions.createwallet();[m
+[31m-                                }[m
+[31m-                            }, 5000);[m
+[32m+[m[32m            if (this.state.loginState == "1") {[m
+[32m+[m[32m                Actions.replace("HomePage");[m
+[32m+[m[32m            } else {[m
+[32m+[m[32m                Actions.createwallet();[m
+[32m+[m[32m            }[m
+         });[m
+     }[m
+ [m
+[36m@@ -82,7 +82,7 @@[m [mexport default class splash extends Component {[m
+                                 }[m
+                             ]} />[m
+ [m
+[31m-                        {/* <Text style={{ fontSize: 20, fontWeight: '700', color: 'white', marginTop: '5%' }}>Ethereum + ERC20 Tokens</Text> */}[m
+[32m+[m[32m                        <Text style={{ fontSize: 23, fontWeight: '700', color: 'white', marginTop: '5%' }}>Task Project</Text>[m
+                     </Animated.View>[m
+                     <Animated.View[m
+                         style={[[m
